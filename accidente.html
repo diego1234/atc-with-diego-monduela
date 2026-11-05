@@ -1,0 +1,1485 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Aviation English — Emergency Communication | Tutor Diego Monduela</title>
+<meta name="description" content="Lección interactiva de inglés aeronáutico basada en una grabación real de emergencia aérea. Tutor: Diego Monduela." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --navy-900:#071a30;
+  --navy-800:#0b2545;
+  --navy-700:#123a63;
+  --sky-700:#0a5c99;
+  --sky-600:#0e6fb8;
+  --sky-500:#1b86d6;
+  --sky-100:#e3f0fb;
+  --sky-50:#f2f8fe;
+  --bg:#f4f7fb;
+  --surface:#ffffff;
+  --fg:#0f2237;
+  --muted:#5a6b80;
+  --border:#d9e3ef;
+  --ok:#0f7a4a;
+  --ok-bg:#e6f6ee;
+  --bad:#b3261e;
+  --bad-bg:#fdecea;
+  --warn:#8a5a00;
+  --warn-bg:#fff4dd;
+  --font-display:'Barlow Condensed','Arial Narrow','Helvetica Neue',sans-serif;
+  --font-body:'Segoe UI',system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif;
+  --font-mono:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--fg);
+  font-family:var(--font-body);
+  font-size:17px;
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+h1,h2,h3{font-family:var(--font-display);font-weight:600;letter-spacing:.005em}
+p{margin:0}
+a{color:var(--sky-700)}
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+.eyebrow{
+  font-family:var(--font-mono);
+  font-size:11px;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:#9fc6ea;
+  margin:0 0 10px;
+}
+.small{font-size:13px}
+.muted{color:var(--muted)}
+
+.site-head{
+  background:var(--navy-900);
+  color:#fff;
+  padding:36px 0 32px;
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.head-inner{display:flex;justify-content:space-between;align-items:flex-end;gap:26px;flex-wrap:wrap}
+.site-head h1{
+  font-size:clamp(40px,7.2vw,70px);
+  line-height:.92;
+  margin:0;
+  text-transform:uppercase;
+  letter-spacing:.01em;
+  color:#fff;
+}
+.site-head .sub{
+  margin-top:12px;
+  max-width:56ch;
+  color:#b9d3ea;
+  font-size:15.5px;
+}
+.site-head .sub strong{color:#fff;font-weight:600}
+.head-meta{display:flex;gap:8px;flex-wrap:wrap;padding-bottom:6px}
+.pill{
+  font-family:var(--font-mono);
+  font-size:11px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:#cfe6fb;
+  border:1px solid rgba(150,200,255,.28);
+  border-radius:5px;
+  padding:5px 9px;
+  white-space:nowrap;
+}
+
+.tabs{
+  position:sticky;
+  top:0;
+  z-index:50;
+  background:rgba(255,255,255,.95);
+  backdrop-filter:blur(8px);
+  -webkit-backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--border);
+}
+.tabs-inner{display:flex;gap:4px;overflow-x:auto;padding:8px 22px;scrollbar-width:none}
+.tabs-inner::-webkit-scrollbar{display:none}
+.tab{
+  flex:0 0 auto;
+  padding:9px 14px;
+  border-radius:999px;
+  color:var(--muted);
+  font-size:13.5px;
+  font-weight:600;
+  letter-spacing:.01em;
+  text-decoration:none;
+  border:1px solid transparent;
+  white-space:nowrap;
+}
+.tab:hover{background:var(--sky-50);color:var(--navy-800)}
+.tab.active{background:var(--navy-800);color:#fff}
+
+main{padding-bottom:20px}
+.block{padding:46px 0 8px;scroll-margin-top:78px}
+.section-head{display:flex;gap:14px;align-items:flex-start;margin-bottom:20px}
+.num{
+  font-family:var(--font-mono);
+  font-size:11.5px;
+  color:var(--sky-700);
+  border:1px solid var(--border);
+  background:#fff;
+  border-radius:5px;
+  padding:3px 7px;
+  letter-spacing:.08em;
+  margin-top:4px;
+  flex:0 0 auto;
+}
+h2{
+  font-size:clamp(28px,3.4vw,40px);
+  line-height:1;
+  margin:0;
+  text-transform:uppercase;
+  color:var(--navy-900);
+}
+.lead{color:var(--muted);max-width:66ch;margin-top:7px;font-size:15px}
+h3{font-size:22px;line-height:1.1;margin:0}
+
+.btn{
+  font:inherit;
+  font-size:14.5px;
+  font-weight:600;
+  letter-spacing:.01em;
+  padding:10px 16px;
+  border-radius:9px;
+  border:1px solid var(--border);
+  background:#fff;
+  color:var(--navy-800);
+  cursor:pointer;
+  transition:background .15s,border-color .15s,transform .05s;
+}
+.btn:hover{border-color:#b9cde3;background:var(--sky-50)}
+.btn:active{transform:translateY(1px)}
+.btn.primary{background:var(--navy-800);border-color:var(--navy-800);color:#fff}
+.btn.primary:hover{background:var(--navy-700);border-color:var(--navy-700)}
+.btn.small{font-size:13px;padding:7px 12px}
+.btn.tiny{font-size:12px;padding:5px 9px;border-radius:7px}
+:focus-visible{outline:2px solid var(--sky-500);outline-offset:2px}
+
+.video-layout{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:20px;align-items:start}
+.player{
+  position:relative;
+  background:#04101f;
+  border-radius:14px;
+  overflow:hidden;
+  border:1px solid #102a45;
+}
+.player video{display:block;width:100%;aspect-ratio:16/9;background:#000}
+.caption-box{
+  position:absolute;
+  left:12px;
+  right:12px;
+  bottom:62px;
+  text-align:left;
+  background:rgba(4,16,31,.88);
+  color:#fff;
+  border:1px solid rgba(150,200,255,.24);
+  border-radius:10px;
+  padding:10px 12px;
+  cursor:pointer;
+  display:block;
+  max-height:46%;
+  overflow:auto;
+  font:inherit;
+}
+.caption-box:hover{border-color:var(--sky-500)}
+.cap-en{display:block;font-size:15px;font-weight:600;line-height:1.35}
+.cap-es{display:block;font-size:13.5px;color:#bcd6ef;margin-top:3px;line-height:1.35}
+.hide-es .caption-box .cap-es,
+.hide-es .transcript .es{display:none}
+
+.controls{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:12px}
+.ctrl-hint{font-size:12.5px;color:var(--muted);margin-left:2px}
+.note{
+  margin-top:14px;
+  padding:13px 15px;
+  border:1px solid #f0dca8;
+  background:var(--warn-bg);
+  border-radius:10px;
+  font-size:13.5px;
+  color:#4a3a12;
+  line-height:1.5;
+}
+.note strong{color:#3a2c08}
+.note a{color:#6b4a00}
+
+.transcript-wrap{
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:14px;
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+  max-height:560px;
+}
+.transcript-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:baseline;
+  gap:10px;
+  padding:13px 16px;
+  border-bottom:1px solid var(--border);
+}
+.transcript-head h3{font-size:19px}
+.transcript{overflow-y:auto;flex:1}
+.cue{
+  display:grid;
+  grid-template-columns:50px 1fr 20px;
+  gap:10px;
+  width:100%;
+  padding:10px 14px;
+  border:0;
+  border-bottom:1px solid #eef3f9;
+  background:none;
+  text-align:left;
+  font:inherit;
+  color:inherit;
+  cursor:pointer;
+}
+.cue:last-child{border-bottom:0}
+.cue:hover{background:var(--sky-50)}
+.cue.active{background:var(--sky-100);box-shadow:inset 3px 0 0 var(--sky-600)}
+.cue-time{font-family:var(--font-mono);font-size:11.5px;color:var(--muted);padding-top:2px}
+.cue-body{display:block}
+.cue .en{display:block;font-size:14px;font-weight:600;line-height:1.4;color:var(--fg)}
+.cue .es{display:block;font-size:13px;color:var(--muted);line-height:1.4;margin-top:2px}
+.cue .flag{
+  display:inline-block;
+  margin-top:5px;
+  font-family:var(--font-mono);
+  font-size:10px;
+  letter-spacing:.05em;
+  text-transform:uppercase;
+  color:var(--warn);
+  background:var(--warn-bg);
+  border:1px solid #f0dca8;
+  border-radius:4px;
+  padding:1px 5px;
+}
+.cue-play{font-size:11px;color:var(--sky-600);opacity:.65;padding-top:4px}
+
+.dict-toolbar{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:14px}
+.search{
+  flex:1;
+  min-width:220px;
+  padding:11px 13px;
+  border:1px solid var(--border);
+  border-radius:9px;
+  font:inherit;
+  font-size:15px;
+  background:#fff;
+  color:var(--fg);
+}
+.search:focus{outline:2px solid var(--sky-500);outline-offset:1px;border-color:transparent}
+.dict{border:1px solid var(--border);border-radius:14px;overflow:hidden;background:var(--surface)}
+.dict-row{
+  display:grid;
+  grid-template-columns:minmax(160px,.8fr) 1.4fr;
+  gap:18px;
+  padding:12px 16px;
+  border-bottom:1px solid #eef3f9;
+}
+.dict-row:last-child{border-bottom:0}
+.dict-term .en{display:block;font-weight:700;font-size:15.5px}
+.dict-term .es{display:block;color:var(--sky-700);font-size:13.5px;margin-top:1px}
+.dict-ex p{font-size:13.5px;line-height:1.45}
+.dict-ex .es{color:var(--muted);font-size:13px}
+
+.grammar-block{
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:14px;
+  padding:22px;
+  margin-bottom:18px;
+}
+.gb-head{display:flex;gap:12px;align-items:baseline;flex-wrap:wrap;margin-bottom:4px}
+.gb-tag{
+  font-family:var(--font-mono);
+  font-size:11px;
+  color:#fff;
+  background:var(--navy-800);
+  border-radius:4px;
+  padding:2px 7px;
+  letter-spacing:.08em;
+}
+.gb-use{color:var(--muted);font-size:14.5px;margin:2px 0 0 0;flex-basis:100%}
+.examples{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:16px 0 4px}
+.ex{
+  border:1px solid #e8eff7;
+  border-radius:9px;
+  padding:10px 12px;
+  background:#fbfdff;
+}
+.ex .en{font-size:14px;font-weight:600;line-height:1.4}
+.ex .es{font-size:13px;color:var(--muted);margin-top:3px;line-height:1.4}
+.contrast{
+  margin:16px 0 0;
+  padding:14px 16px;
+  border:1px solid #cfe3f5;
+  background:var(--sky-50);
+  border-radius:10px;
+  font-size:14px;
+}
+.contrast p{margin-top:6px}
+.contrast .pair{font-weight:600;color:var(--navy-800)}
+.contrast .pair span{font-weight:400;color:var(--muted)}
+
+.quiz{margin-top:18px}
+.quiz-bar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  padding:9px 14px;
+  background:var(--navy-800);
+  color:#fff;
+  border-radius:10px;
+  font-size:14px;
+}
+.quiz-score{font-family:var(--font-mono);font-size:12.5px;letter-spacing:.04em}
+.quiz-bar .btn{background:transparent;color:#fff;border-color:rgba(255,255,255,.3)}
+.quiz-bar .btn:hover{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.45)}
+.q-list{display:grid;gap:12px;margin-top:12px}
+.q{background:#fff;border:1px solid var(--border);border-radius:12px;padding:16px}
+.q-prompt{font-size:15.5px;font-weight:600;margin:0 0 12px;display:flex;gap:9px;align-items:flex-start}
+.q-num{
+  font-family:var(--font-mono);
+  font-size:11px;
+  color:var(--sky-700);
+  border:1px solid var(--border);
+  border-radius:4px;
+  padding:1px 5px;
+  margin-top:3px;
+  flex:0 0 auto;
+}
+.replay{margin:0 0 12px;border-color:#b9d7f0;color:var(--sky-700);background:var(--sky-50)}
+.options{display:grid;gap:8px}
+.opt{
+  display:flex;
+  gap:10px;
+  align-items:flex-start;
+  text-align:left;
+  font:inherit;
+  font-size:14.5px;
+  line-height:1.4;
+  padding:10px 12px;
+  border:1px solid var(--border);
+  border-radius:9px;
+  background:#fff;
+  cursor:pointer;
+  color:var(--fg);
+}
+.opt:hover:not(:disabled){border-color:#a9c6e4;background:var(--sky-50)}
+.opt:disabled{cursor:default}
+.opt-key{
+  font-family:var(--font-mono);
+  font-size:10.5px;
+  color:var(--muted);
+  border:1px solid var(--border);
+  border-radius:4px;
+  padding:1px 4px;
+  margin-top:1px;
+  flex:0 0 auto;
+}
+.opt.correct{border-color:#8fd0b0;background:var(--ok-bg);color:#0a4f31}
+.opt.correct .opt-key{border-color:#8fd0b0;color:#0a4f31}
+.opt.wrong{border-color:#f0b4ae;background:var(--bad-bg);color:#7a1a14}
+.opt.wrong .opt-key{border-color:#f0b4ae;color:#7a1a14}
+.q-why{
+  margin:12px 0 0;
+  padding:10px 12px;
+  border:1px solid #d6e8f9;
+  background:var(--sky-50);
+  border-radius:8px;
+  font-size:13.5px;
+  line-height:1.45;
+  color:#22415f;
+}
+
+.structure{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  align-items:center;
+  font-family:var(--font-mono);
+  font-size:13.5px;
+  background:var(--navy-900);
+  color:#dcecfa;
+  border-radius:10px;
+  padding:14px 16px;
+  margin-bottom:16px;
+}
+.structure .chip{
+  background:rgba(120,190,255,.16);
+  border:1px solid rgba(120,190,255,.3);
+  border-radius:5px;
+  padding:3px 8px;
+  color:#bfe0fb;
+}
+.structure .arrow{color:#7fb4e0}
+.tc-list{display:grid;gap:10px;margin-bottom:6px}
+.tc{
+  display:grid;
+  grid-template-columns:26px 1fr;
+  gap:12px;
+  padding:12px 14px;
+  border:1px solid var(--border);
+  border-radius:10px;
+  background:#fff;
+}
+.tc .n{font-family:var(--font-mono);font-size:11px;color:var(--sky-700);padding-top:3px}
+.tc .en{font-size:14.5px;font-weight:600;line-height:1.4}
+.tc .es{font-size:13.5px;color:var(--muted);margin-top:2px;line-height:1.4}
+
+.exp-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.exp{background:#fff;border:1px solid var(--border);border-radius:12px;padding:16px}
+.exp-head{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;margin-bottom:12px}
+.exp h3{font-size:21px;color:var(--navy-900)}
+.exp-es{font-size:13.5px;color:var(--sky-700);margin-top:2px}
+.tag{
+  font-family:var(--font-mono);
+  font-size:9.5px;
+  letter-spacing:.05em;
+  text-transform:uppercase;
+  border-radius:4px;
+  padding:3px 6px;
+  white-space:nowrap;
+  flex:0 0 auto;
+  margin-top:3px;
+}
+.tag.std{color:#0a5c99;background:var(--sky-100);border:1px solid #c7e0f5}
+.tag.conv{color:#7a5200;background:var(--warn-bg);border:1px solid #f0dca8}
+.exp-toggle{margin-bottom:2px}
+.exp-body{margin-top:12px;border-top:1px solid #eef3f9;padding-top:12px;font-size:13.5px}
+.exp-meaning{font-size:14px;line-height:1.5}
+.exp-ex{margin-top:8px;line-height:1.45}
+.exp-ex.es{color:var(--muted);font-size:13px;margin-top:2px}
+.exp-lab{
+  font-family:var(--font-mono);
+  font-size:9.5px;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:var(--muted);
+  border:1px solid var(--border);
+  border-radius:3px;
+  padding:1px 4px;
+  margin-right:4px;
+}
+
+.fc-stage{max-width:560px;margin:0 auto}
+.fc-scene{perspective:1400px;height:286px;margin-bottom:16px}
+.fc-card{
+  position:relative;
+  width:100%;
+  height:100%;
+  transform-style:preserve-3d;
+  transition:transform .4s cubic-bezier(.2,.7,.2,1);
+  cursor:pointer;
+  border:0;
+  background:transparent;
+  padding:0;
+  font:inherit;
+  color:inherit;
+}
+.fc-card.flipped{transform:rotateY(180deg)}
+.fc-face{
+  position:absolute;
+  inset:0;
+  backface-visibility:hidden;
+  -webkit-backface-visibility:hidden;
+  border-radius:14px;
+  border:1px solid var(--border);
+  background:#fff;
+  padding:26px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  box-shadow:0 12px 28px rgba(9,30,60,.07);
+}
+.fc-back{transform:rotateY(180deg);background:var(--navy-800);border-color:var(--navy-800);color:#fff}
+.fc-kicker{
+  font-family:var(--font-mono);
+  font-size:10px;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:var(--muted);
+  margin-bottom:14px;
+}
+.fc-back .fc-kicker{color:#8fb9dd}
+.fc-word{font-family:var(--font-display);font-size:clamp(38px,5vw,52px);line-height:1;font-weight:600;color:var(--navy-900)}
+.fc-back .fc-word{color:#fff}
+.fc-ex{margin-top:14px;font-size:14px;color:var(--muted);max-width:38ch;line-height:1.45}
+.fc-back .fc-ex{color:#c3dcef}
+.fc-controls{display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
+.fc-count{
+  text-align:center;
+  font-family:var(--font-mono);
+  font-size:12px;
+  letter-spacing:.16em;
+  color:var(--muted);
+  margin-top:12px;
+}
+.fc-hint{text-align:center;font-size:12.5px;color:var(--muted);margin-top:4px}
+
+.game{
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:14px;
+  padding:22px;
+  margin-bottom:18px;
+}
+.game-head{display:flex;gap:12px;align-items:baseline;flex-wrap:wrap;margin-bottom:4px}
+.game-head h3{color:var(--navy-900)}
+.game-sub{font-size:13.5px;color:var(--muted);flex-basis:100%;margin-top:2px}
+.match-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}
+.match-col{display:grid;gap:8px;align-content:start}
+.match-col h4{
+  font-family:var(--font-mono);
+  font-size:10px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--muted);
+  margin:0 0 2px;
+  font-weight:500;
+}
+.match-item{
+  font:inherit;
+  font-size:14.5px;
+  padding:11px 12px;
+  border:1px solid var(--border);
+  background:#fff;
+  border-radius:9px;
+  cursor:pointer;
+  text-align:left;
+  color:var(--fg);
+}
+.match-item:hover:not(:disabled){border-color:#a9c6e4;background:var(--sky-50)}
+.match-item.selected{border-color:var(--sky-600);background:var(--sky-100);box-shadow:0 0 0 2px rgba(14,111,184,.14)}
+.match-item.matched{border-color:#8fd0b0;background:var(--ok-bg);color:#0a4f31;cursor:default}
+.match-item.miss{border-color:#e8a29b;background:var(--bad-bg)}
+.sr-status{
+  margin-top:12px;
+  font-size:13px;
+  color:var(--muted);
+  min-height:18px;
+}
+.g4-player{max-width:540px;margin:14px 0 4px}
+.g4-player video{width:100%;display:block;border-radius:10px;background:#04101f;border:1px solid #102a45;aspect-ratio:16/9}
+
+.site-foot{
+  margin-top:64px;
+  background:var(--navy-900);
+  color:#c9dcef;
+  padding:26px 0;
+  font-size:13.5px;
+}
+.site-foot .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center}
+.site-foot .mono{font-family:var(--font-mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#8fb9dd}
+
+@media (min-width:760px){
+  .options{grid-template-columns:1fr 1fr}
+}
+@media (max-width:980px){
+  .video-layout{grid-template-columns:1fr}
+  .transcript-wrap{max-height:420px}
+  .exp-grid{grid-template-columns:1fr}
+}
+@media (max-width:720px){
+  .examples{grid-template-columns:1fr}
+  .dict-row{grid-template-columns:1fr;gap:4px}
+  .fc-scene{height:320px}
+  .caption-box{bottom:54px;left:8px;right:8px;padding:8px 10px}
+  .cap-en{font-size:13.5px}
+  .cap-es{font-size:12px}
+  .game,.grammar-block{padding:16px}
+  .block{padding-top:36px}
+  .head-inner{align-items:flex-start}
+}
+@media (max-width:520px){
+  .match-grid{gap:8px}
+  .match-item{font-size:13px;padding:9px 10px}
+  .ctrl-hint{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none !important;animation:none !important}
+}
+</style>
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap head-inner">
+    <div>
+      <p class="eyebrow">Aviation English · Radiotelefonía</p>
+      <h1>Emergency<br />Communication</h1>
+      <p class="sub">Lección interactiva basada en una grabación real de emergencia aérea. Inglés y español sincronizados, vocabulario técnico, gramática y práctica guiada. Tutor: <strong>Diego Monduela</strong></p>
+    </div>
+    <div class="head-meta">
+      <span class="pill">N722BD</span>
+      <span class="pill">EN / ES</span>
+      <span class="pill">Nivel B1–B2</span>
+    </div>
+  </div>
+</header>
+
+<nav class="tabs" aria-label="Secciones de la lección">
+  <div class="wrap tabs-inner">
+    <a class="tab" href="#video">Vídeo</a>
+    <a class="tab" href="#diccionario">Diccionario</a>
+    <a class="tab" href="#gramatica">Gramática</a>
+    <a class="tab" href="#expresiones">Expresiones</a>
+    <a class="tab" href="#condicional">Condicional</a>
+    <a class="tab" href="#flashcards">Tarjetas</a>
+    <a class="tab" href="#juegos">Juegos</a>
+  </div>
+</nav>
+
+<main>
+
+<section id="video" class="block">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="num">01</span>
+      <div>
+        <h2>Vídeo y subtítulos</h2>
+        <p class="lead">Escucha la grabación con subtítulos bilingües sincronizados. Pulsa cualquier línea del transcript —o el subtítulo sobre el vídeo— para repetir esa frase.</p>
+      </div>
+    </div>
+
+    <div class="video-layout">
+      <div>
+        <div class="player">
+          <video id="videoEl" controls preload="metadata" playsinline crossorigin="anonymous">
+            <source src="https://res.cloudinary.com/oxkbcyki/video/upload/airplane.mp4?_s=vp-3.7.2" type="video/mp4" />
+            Tu navegador no admite vídeo HTML5.
+          </video>
+          <button id="captionBox" class="caption-box" type="button" aria-label="Repetir la frase actual">
+            <span class="cap-en" id="capEn">—</span>
+            <span class="cap-es" id="capEs">—</span>
+          </button>
+        </div>
+        <div class="controls">
+          <button id="playBtn" class="btn primary" type="button">Reproducir</button>
+          <button id="replayBtn" class="btn" type="button">Repetir frase</button>
+          <button id="esBtn" class="btn" type="button" aria-pressed="true">Ocultar español</button>
+          <span class="ctrl-hint">Volumen y velocidad: controles del reproductor.</span>
+        </div>
+        <div class="note">
+          <strong>Nota del instructor.</strong> Cinco fragmentos (00:00, 00:22, 00:30, 00:44 y 01:12) están marcados «Verificar con el audio». No se ha inventado diálogo: confirma esas palabras con la grabación antes de usarlas como respuesta modelo. La fraseología estándar se ha contrastado con el <a href="https://www.faa.gov/air_traffic/publications/atpubs/aim_html/" target="_blank" rel="noopener">FAA AIM</a> y la OACI (Doc 9432).
+        </div>
+      </div>
+
+      <aside class="transcript-wrap" aria-label="Transcripción bilingüe">
+        <div class="transcript-head">
+          <h3>Transcript</h3>
+          <span class="muted small">14 líneas</span>
+        </div>
+        <div id="transcript" class="transcript"></div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section id="diccionario" class="block">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="num">02</span>
+      <div>
+        <h2>Diccionario de aviación</h2>
+        <p class="lead">Quince términos de la grabación, con ejemplo en inglés y su traducción. Busca en inglés o en español.</p>
+      </div>
+    </div>
+    <div class="dict-toolbar">
+      <input id="dictSearch" class="search" type="search" placeholder="Buscar: climb, rumbo, overspeed…" aria-label="Buscar términos del diccionario" />
+      <span id="dictCount" class="muted small"></span>
+    </div>
+    <div id="dictList" class="dict"></div>
+  </div>
+</section>
+
+<section id="gramatica" class="block">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="num">03</span>
+      <div>
+        <h2>Gramática inglesa</h2>
+        <p class="lead">Tres tiempos verbales con ejemplos del contexto aeronáutico y preguntas de comprobación. Las explicaciones están en español.</p>
+      </div>
+    </div>
+
+    <div class="grammar-block">
+      <div class="gb-head">
+        <span class="gb-tag">A</span>
+        <h3>Present simple</h3>
+        <p class="gb-use">Se usa para hechos, hábitos y rutinas.</p>
+      </div>
+      <div class="examples">
+        <div class="ex"><p class="en">Pilots communicate with controllers.</p><p class="es">Los pilotos se comunican con los controladores.</p></div>
+        <div class="ex"><p class="en">Controllers monitor aircraft.</p><p class="es">Los controladores supervisan las aeronaves.</p></div>
+        <div class="ex"><p class="en">The aircraft maintains its altitude.</p><p class="es">La aeronave mantiene su altitud.</p></div>
+        <div class="ex"><p class="en">Pilots follow instructions.</p><p class="es">Los pilotos siguen las instrucciones.</p></div>
+      </div>
+      <div class="quiz" data-quiz="presentSimple"></div>
+    </div>
+
+    <div class="grammar-block">
+      <div class="gb-head">
+        <span class="gb-tag">B</span>
+        <h3>Past simple</h3>
+        <p class="gb-use">Se usa para acciones terminadas en el pasado.</p>
+      </div>
+      <div class="examples">
+        <div class="ex"><p class="en">The pilot reported an emergency.</p><p class="es">El piloto declaró una emergencia.</p></div>
+        <div class="ex"><p class="en">The aircraft descended rapidly.</p><p class="es">La aeronave descendió rápidamente.</p></div>
+        <div class="ex"><p class="en">The controller acknowledged the message.</p><p class="es">El controlador confirmó la recepción del mensaje.</p></div>
+        <div class="ex"><p class="en">The crew experienced an overspeed condition.</p><p class="es">La tripulación experimentó una condición de exceso de velocidad.</p></div>
+      </div>
+      <div class="quiz" data-quiz="pastSimple"></div>
+    </div>
+
+    <div class="grammar-block">
+      <div class="gb-head">
+        <span class="gb-tag">C</span>
+        <h3>Present perfect</h3>
+        <p class="gb-use">Se forma con have / has + participio pasivo. Conecta una acción pasada con el momento presente.</p>
+      </div>
+      <div class="examples">
+        <div class="ex"><p class="en">The pilot has reported an emergency.</p><p class="es">El piloto ha declarado una emergencia.</p></div>
+        <div class="ex"><p class="en">The aircraft has descended rapidly.</p><p class="es">La aeronave ha descendido rápidamente.</p></div>
+        <div class="ex"><p class="en">The controller has received the message.</p><p class="es">El controlador ha recibido el mensaje.</p></div>
+        <div class="ex"><p class="en">The crew has experienced a serious problem.</p><p class="es">La tripulación ha experimentado un problema grave.</p></div>
+      </div>
+      <div class="contrast">
+        <p class="pair">The pilot reported an emergency. <span>→ El piloto declaró una emergencia (en un momento concreto del pasado).</span></p>
+        <p class="pair">The pilot has reported an emergency. <span>→ El piloto ha declarado una emergencia (ya ocurrió y ahora importa: el controlador tiene la información).</span></p>
+        <p>El past simple mira el momento terminado. El present perfect mira el resultado en el presente. No decimos «has reported» con una hora concreta como «at 00:22».</p>
+      </div>
+      <div class="quiz" data-quiz="presentPerfect"></div>
+    </div>
+  </div>
+</section>
+
+<section id="expresiones" class="block">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="num">04</span>
+      <div>
+        <h2>Expresiones clave</h2>
+        <p class="lead">Ocho expresiones de la grabación. Cada ficha indica si es fraseología estándar o inglés conversacional, con significado, traducción y un ejemplo adicional.</p>
+      </div>
+    </div>
+    <div id="expressions" class="exp-grid"></div>
+  </div>
+</section>
+
+<section id="condicional" class="block">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="num">05</span>
+      <div>
+        <h2>El tercer condicional</h2>
+        <p class="lead">Sirve para imaginar un pasado distinto. Aquí se aplica a situaciones hipotéticas de aviación, no a conclusiones sobre la emergencia real.</p>
+      </div>
+    </div>
+
+    <div class="structure" aria-label="Estructura del tercer condicional">
+      <span class="chip">If + past perfect</span>
+      <span class="arrow">→</span>
+      <span class="chip">would / might / could have + past participle</span>
+    </div>
+
+    <div class="tc-list">
+      <div class="tc"><span class="n">1</span><div><p class="en">If the pilot had identified the problem earlier, he might have had more time to react.</p><p class="es">Si el piloto hubiera identificado el problema antes, podría haber tenido más tiempo para reaccionar.</p></div></div>
+      <div class="tc"><span class="n">2</span><div><p class="en">If the aircraft had maintained a safe speed, it might have avoided the overspeed condition.</p><p class="es">Si la aeronave hubiera mantenido una velocidad segura, podría haber evitado la condición de exceso de velocidad.</p></div></div>
+      <div class="tc"><span class="n">3</span><div><p class="en">If the controller had received more information, they could have coordinated additional assistance.</p><p class="es">Si el controlador hubiera recibido más información, podría haber coordinado ayuda adicional.</p></div></div>
+      <div class="tc"><span class="n">4</span><div><p class="en">If the crew had recognized the situation sooner, they might have responded differently.</p><p class="es">Si la tripulación hubiera reconocido la situación antes, podría haber reaccionado de otra manera.</p></div></div>
+      <div class="tc"><span class="n">5</span><div><p class="en">If the pilot had requested help earlier, the controller might have been able to respond sooner.</p><p class="es">Si el piloto hubiera solicitado ayuda antes, el controlador podría haber respondido antes.</p></div></div>
+    </div>
+
+    <div class="quiz" data-quiz="thirdConditional"></div>
+  </div>
+</section>
+
+<section id="flashcards" class="block">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="num">06</span>
+      <div>
+        <h2>Tarjetas de vocabulario</h2>
+        <p class="lead">Quince tarjetas para estudiar. Delante el término en inglés; al girarla, la traducción y el ejemplo en español.</p>
+      </div>
+    </div>
+    <div class="fc-stage">
+      <div class="fc-scene">
+        <div id="fcCard" class="fc-card" role="button" tabindex="0" aria-pressed="false" aria-label="Tarjeta de vocabulario. Pulsa para girar.">
+          <div class="fc-face fc-front">
+            <span class="fc-kicker">English</span>
+            <span id="fcWord" class="fc-word">Climb</span>
+            <span id="fcEx" class="fc-ex"></span>
+          </div>
+          <div class="fc-face fc-back" aria-hidden="true">
+            <span class="fc-kicker">Español</span>
+            <span id="fcWordEs" class="fc-word">Ascender</span>
+            <span id="fcExEs" class="fc-ex"></span>
+          </div>
+        </div>
+      </div>
+      <div class="fc-controls">
+        <button id="fcPrev" class="btn small" type="button">Anterior</button>
+        <button id="fcFlip" class="btn small primary" type="button">Girar</button>
+        <button id="fcNext" class="btn small" type="button">Siguiente</button>
+        <button id="fcShuffle" class="btn small" type="button">Mezclar</button>
+      </div>
+      <p id="fcCount" class="fc-count">1 / 15</p>
+      <p class="fc-hint">Pulsa la tarjeta o el botón «Girar». También puedes usar Intro o Espacio.</p>
+    </div>
+  </div>
+</section>
+
+<section id="juegos" class="block">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="num">07</span>
+      <div>
+        <h2>Juegos interactivos</h2>
+        <p class="lead">Cuatro actividades con corrección inmediata, explicación y puntuación. Puedes reiniciar cada juego cuando quieras.</p>
+      </div>
+    </div>
+
+    <div class="game">
+      <div class="game-head">
+        <h3>Juego 1 · Empareja las palabras</h3>
+        <p class="game-sub">Elige una palabra en inglés y su equivalente en español. Diez parejas.</p>
+      </div>
+      <div class="quiz-bar">
+        <span id="g1Score" class="quiz-score" aria-live="polite">Emparejadas: 0 / 10</span>
+        <button id="g1Reset" class="btn small" type="button">Reiniciar</button>
+      </div>
+      <div class="match-grid">
+        <div class="match-col">
+          <h4>English</h4>
+          <div id="matchLeft"></div>
+        </div>
+        <div class="match-col">
+          <h4>Español</h4>
+          <div id="matchRight"></div>
+        </div>
+      </div>
+      <p id="g1Status" class="sr-status" aria-live="polite"></p>
+    </div>
+
+    <div class="game">
+      <div class="game-head">
+        <h3>Juego 2 · Elige el tiempo correcto</h3>
+        <p class="game-sub">Diez preguntas de presente simple, pasado simple y presente perfecto.</p>
+      </div>
+      <div id="quizGame2" class="quiz"></div>
+    </div>
+
+    <div class="game">
+      <div class="game-head">
+        <h3>Juego 3 · Tercer condicional</h3>
+        <p class="game-sub">Ocho frases para completar con la forma correcta.</p>
+      </div>
+      <div id="quizGame3" class="quiz"></div>
+    </div>
+
+    <div class="game">
+      <div class="game-head">
+        <h3>Juego 4 · Escucha y responde</h3>
+        <p class="game-sub">Usa el reproductor y los botones de repetición para responder con la grabación.</p>
+      </div>
+      <div class="g4-player">
+        <video id="g4video" controls preload="none" playsinline crossorigin="anonymous">
+          <source src="https://res.cloudinary.com/oxkbcyki/video/upload/airplane.mp4?_s=vp-3.7.2" type="video/mp4" />
+          Tu navegador no admite vídeo HTML5.
+        </video>
+      </div>
+      <div id="quizGame4" class="quiz"></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <span>Learn Real English Through Aviation — Tutor Diego Monduela</span>
+    <span class="mono">Aviation English · Emergency Communication</span>
+  </div>
+</footer>
+
+<noscript>
+  <div class="wrap" style="padding:16px 22px;">
+    <p>Esta lección necesita JavaScript para los subtítulos, las tarjetas y los juegos.</p>
+  </div>
+</noscript>
+
+<script>
+(function () {
+  "use strict";
+
+  var $ = function (sel, root) { return (root || document).querySelector(sel); };
+  var $$ = function (sel, root) { return Array.prototype.slice.call((root || document).querySelectorAll(sel)); };
+  var fmt = function (s) {
+    s = Math.max(0, Math.floor(s));
+    return String(Math.floor(s / 60)).padStart(2, "0") + ":" + String(s % 60).padStart(2, "0");
+  };
+  function shuffle(arr) {
+    for (var i = arr.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var t = arr[i]; arr[i] = arr[j]; arr[j] = t;
+    }
+    return arr;
+  }
+
+  var CUES = [
+    { t: 0, en: "We need to climb 370, ABWD.", es: "Necesitamos ascender al nivel de vuelo 370.", note: "«ABWD» no es verificable en el audio." },
+    { t: 5, en: "N722BD, roger. Climb and maintain FL370, no further right than your present heading for traffic.", es: "N722BD, recibido. Ascienda y mantenga el nivel de vuelo 370. No vire más a la derecha de su rumbo actual debido al tráfico." },
+    { t: 11, en: "Climb 370, ABWD.", es: "Ascender al nivel de vuelo 370." },
+    { t: 14, en: "722BD, we're descending 8,000 feet per minute.", es: "Estamos descendiendo a 8.000 pies por minuto." },
+    { t: 20, en: "N722BD, roger.", es: "N722BD, recibido." },
+    { t: 22, en: "Decline emergency, 722BD. We are in an overspeed condition, descending 20,000 feet per minute.", es: "Estamos en una condición de exceso de velocidad, descendiendo a 20.000 pies por minuto.", note: "Primera frase pendiente de confirmar (posible «declaring an emergency»)." },
+    { t: 30, en: "N722BD, roger. I'll excuse your discretion. Let me know what you need.", es: "N722BD, recibido. Avíseme qué necesita.", note: "Frase intermedia pendiente de confirmar." },
+    { t: 36, en: "We're going to crash into the ground, 722BD.", es: "Vamos a estrellarnos contra el suelo." },
+    { t: 41, en: "N722BD, I'm here with you. Talk to me.", es: "N722BD, estoy aquí con usted. Hábleme." },
+    { t: 44, en: "We are descending 22,000 feet and we are banking 60 degrees.", es: "Estamos descendiendo 22.000 pies y tenemos una inclinación lateral de 60 grados.", note: "Verificar las cifras contra el audio." },
+    { t: 55, en: "N722BD, roger.", es: "N722BD, recibido." },
+    { t: 59, en: "Look outside, Jeff! Look outside!", es: "¡Mira afuera, Jeff! ¡Mira afuera!" },
+    { t: 66, en: "N722BD, how do you hear?", es: "N722BD, ¿me recibe?" },
+    { t: 72, en: "N722BD, Miami.", es: "N722BD, Miami.", note: "Palabra final pendiente de confirmar." }
+  ];
+
+  var DICTIONARY = [
+    { en: "Climb", es: "Ascender", example: "Climb and maintain flight level 370.", exampleEs: "Ascienda y mantenga el nivel de vuelo 370." },
+    { en: "Descend", es: "Descender", example: "We are descending 8,000 feet per minute.", exampleEs: "Estamos descendiendo a 8.000 pies por minuto." },
+    { en: "Maintain", es: "Mantener", example: "Maintain flight level 370.", exampleEs: "Mantenga el nivel de vuelo 370." },
+    { en: "Heading", es: "Rumbo", example: "Turn right to a heading of 090.", exampleEs: "Vire a la derecha al rumbo 090." },
+    { en: "Flight level", es: "Nivel de vuelo", example: "The aircraft is at flight level 370.", exampleEs: "La aeronave está en el nivel de vuelo 370." },
+    { en: "Overspeed", es: "Exceso de velocidad", example: "The aircraft is in an overspeed condition.", exampleEs: "La aeronave está en condición de exceso de velocidad." },
+    { en: "Traffic", es: "Tráfico aéreo", example: "Traffic at your two o'clock, five miles.", exampleEs: "Tráfico a sus dos en punto, cinco millas." },
+    { en: "Emergency", es: "Emergencia", example: "The pilot is declaring an emergency.", exampleEs: "El piloto está declarando una emergencia." },
+    { en: "Crash", es: "Estrellarse", example: "We're going to crash into the ground.", exampleEs: "Vamos a estrellarnos contra el suelo." },
+    { en: "Ground", es: "Suelo", example: "The aircraft is close to the ground.", exampleEs: "La aeronave está cerca del suelo." },
+    { en: "Bank angle", es: "Ángulo de alabeo", example: "The bank angle is 60 degrees.", exampleEs: "El ángulo de alabeo es de 60 grados." },
+    { en: "Descent rate", es: "Régimen de descenso", example: "The descent rate is 22,000 feet per minute.", exampleEs: "El régimen de descenso es de 22.000 pies por minuto." },
+    { en: "Roger", es: "Recibido", example: "Roger, N722BD.", exampleEs: "Recibido, N722BD. (Significa «he recibido su última transmisión», no «sí» ni «cumpliré»)." },
+    { en: "Feet per minute", es: "Pies por minuto", example: "We are descending 6,000 feet per minute.", exampleEs: "Estamos descendiendo a 6.000 pies por minuto." },
+    { en: "Present heading", es: "Rumbo actual", example: "No further right than your present heading.", exampleEs: "No vire más a la derecha de su rumbo actual." }
+  ];
+
+  var EXPRESSIONS = [
+    { term: "Climb and maintain", es: "Ascender y mantener", type: "Fraseología estándar", meaning: "Instrucción de ATC: ascienda hasta el nivel asignado y permanezca en él.", example: "Climb and maintain flight level 340.", exampleEs: "Ascienda y mantenga el nivel de vuelo 340." },
+    { term: "Present heading", es: "Rumbo actual", type: "Fraseología estándar", meaning: "El rumbo que la aeronave está volando en este momento.", example: "Maintain your present heading.", exampleEs: "Mantenga su rumbo actual." },
+    { term: "For traffic", es: "Debido al tráfico", type: "Fraseología estándar", meaning: "La restricción se debe a otra aeronave cercana. Es una forma abreviada de «due to traffic».", example: "Turn left for traffic.", exampleEs: "Vire a la izquierda debido al tráfico." },
+    { term: "Overspeed condition", es: "Condición de exceso de velocidad", type: "Lenguaje técnico-operativo", meaning: "La aeronave supera su velocidad máxima permitida.", example: "The aircraft is in an overspeed condition.", exampleEs: "La aeronave está en condición de exceso de velocidad." },
+    { term: "Let me know what you need", es: "Avíseme qué necesita", type: "Inglés conversacional", meaning: "El controlador pide al piloto que diga qué asistencia requiere.", example: "Let me know what you need and I'll coordinate it.", exampleEs: "Avíseme qué necesita y lo coordinaré." },
+    { term: "I'm here with you", es: "Estoy aquí con usted", type: "Inglés conversacional", meaning: "Frase de acompañamiento: el controlador sigue en frecuencia y no abandona al piloto.", example: "I'm here with you. Talk to me.", exampleEs: "Estoy aquí con usted. Hábleme." },
+    { term: "We're going to crash", es: "Vamos a estrellarnos", type: "Inglés conversacional", meaning: "Declaración de peligro inmediato. No es fraseología estándar: para declarar una emergencia se usa «Mayday» o «declaring an emergency».", example: "We're going to crash into the ground.", exampleEs: "Vamos a estrellarnos contra el suelo." },
+    { term: "How do you hear?", es: "¿Me recibe?", type: "Fraseología estándar", meaning: "Pregunta de legibilidad: comprueba si la transmisión se recibe con claridad. También se dice «How do you read?».", example: "N722BD, how do you hear me?", exampleEs: "N722BD, ¿me recibe?" }
+  ];
+
+  var Q_PRESENT = [
+    { prompt: "Controllers ___ aircraft.", options: [{ t: "monitor", ok: true }, { t: "monitors" }, { t: "monitoring" }], why: "«Controllers» es plural, así que el verbo va sin -s: monitor." },
+    { prompt: "The aircraft ___ its altitude.", options: [{ t: "maintain" }, { t: "maintains", ok: true }, { t: "are maintaining" }], why: "«The aircraft» es singular: en presente simple el verbo lleva -s." },
+    { prompt: "Pilots ___ instructions.", options: [{ t: "follows" }, { t: "follow", ok: true }, { t: "following" }], why: "«Pilots» es plural: follow, sin -s." },
+    { prompt: "A pilot ___ with air traffic control.", options: [{ t: "communicate" }, { t: "communicates", ok: true }, { t: "communicating" }], why: "«A pilot» es singular: communicates." },
+    { prompt: "Air traffic control ___ the airspace.", options: [{ t: "manage" }, { t: "manages", ok: true }, { t: "managing" }], why: "«Air traffic control» es singular: manages." }
+  ];
+
+  var Q_PAST = [
+    { prompt: "The pilot ___ an emergency.", options: [{ t: "report" }, { t: "reported", ok: true }, { t: "has reported" }], why: "El pasado simple sitúa la acción terminada en el pasado: reported." },
+    { prompt: "The aircraft ___ rapidly.", options: [{ t: "descend" }, { t: "descended", ok: true }, { t: "descends" }], why: "Acción terminada: descended." },
+    { prompt: "The controller ___ the message.", options: [{ t: "acknowledge" }, { t: "acknowledged", ok: true }, { t: "has acknowledged" }], why: "Acción terminada: acknowledged." },
+    { prompt: "The crew ___ an overspeed condition.", options: [{ t: "experience" }, { t: "experienced", ok: true }, { t: "experiences" }], why: "Acción terminada: experienced." },
+    { prompt: "The pilot ___ for help.", options: [{ t: "ask" }, { t: "asked", ok: true }, { t: "has asked" }], why: "Acción terminada: asked." }
+  ];
+
+  var Q_PERFECT = [
+    { prompt: "The pilot ___ an emergency.", options: [{ t: "reported" }, { t: "has reported", ok: true }, { t: "reports" }], why: "Present perfect: has + participio. La acción ya ocurrió y es relevante ahora." },
+    { prompt: "The aircraft ___ rapidly.", options: [{ t: "descended" }, { t: "has descended", ok: true }, { t: "descends" }], why: "Present perfect: has + descended." },
+    { prompt: "The controller ___ the message.", options: [{ t: "received" }, { t: "has received", ok: true }, { t: "receives" }], why: "Present perfect: has + received." },
+    { prompt: "The crew ___ a serious problem.", options: [{ t: "has experienced", ok: true }, { t: "experienced" }, { t: "experiences" }], why: "Aquí «crew» se trata como una unidad: has + participio." },
+    { prompt: "We ___ the instruction.", options: [{ t: "have received", ok: true }, { t: "received" }, { t: "receive" }], why: "Present perfect con «we»: have + participio." }
+  ];
+
+  var Q_THIRD = [
+    { prompt: "If the pilot ___ the problem earlier, he might have had more time to react.", options: [{ t: "identified" }, { t: "had identified", ok: true }, { t: "has identified" }], why: "Tercer condicional: if + past perfect → had identified." },
+    { prompt: "If the aircraft ___ a safe speed, it might have avoided the overspeed condition.", options: [{ t: "maintained" }, { t: "had maintained", ok: true }, { t: "maintains" }], why: "Tras «if» usamos past perfect: had maintained." },
+    { prompt: "If the controller ___ more information, they could have coordinated assistance.", options: [{ t: "received" }, { t: "had received", ok: true }, { t: "have received" }], why: "If + past perfect: had received." },
+    { prompt: "If the crew ___ the situation sooner, they might have responded differently.", options: [{ t: "recognized" }, { t: "had recognized", ok: true }, { t: "have recognized" }], why: "If + past perfect: had recognized." },
+    { prompt: "If the pilot had requested help earlier, the controller ___ able to respond sooner.", options: [{ t: "might be" }, { t: "might have been", ok: true }, { t: "may be" }], why: "La consecuencia usa might have + participio: might have been." },
+    { prompt: "If the aircraft had not entered the overspeed condition, the crew ___ more time.", options: [{ t: "would have" }, { t: "would have had", ok: true }, { t: "will have" }], why: "Would have + participio: would have had (habría tenido)." },
+    { prompt: "If the pilot had declared the emergency earlier, ATC ___ have prepared additional support.", options: [{ t: "could", ok: true }, { t: "can" }, { t: "will" }], why: "Could have + participio = podría haber…" },
+    { prompt: "They ___ have landed safely if the weather had been better.", options: [{ t: "could", ok: true }, { t: "can" }, { t: "will" }], why: "La consecuencia hipotética usa could have + participio." }
+  ];
+
+  var Q_GAME2 = [
+    { prompt: "Controllers ___ with pilots every day.", options: [{ t: "communicate", ok: true }, { t: "communicated" }, { t: "have communicated" }], why: "Rutina diaria → presente simple." },
+    { prompt: "The pilot ___ an emergency at 00:22.", options: [{ t: "declares" }, { t: "declared", ok: true }, { t: "has declared" }], why: "Hora concreta en el pasado → pasado simple." },
+    { prompt: "The aircraft ___ rapidly in the last few seconds.", options: [{ t: "descended" }, { t: "has descended", ok: true }, { t: "descends" }], why: "«In the last few seconds» conecta el pasado con el presente → present perfect." },
+    { prompt: "Right now, the controller ___ the frequency.", options: [{ t: "monitors", ok: true }, { t: "monitored" }, { t: "has monitored" }], why: "«Right now» → presente simple." },
+    { prompt: "The crew ___ an overspeed condition during the descent.", options: [{ t: "experiences" }, { t: "experienced", ok: true }, { t: "has experienced" }], why: "«During the descent» es un periodo terminado → pasado simple." },
+    { prompt: "The controller ___ the message a few seconds ago.", options: [{ t: "receives" }, { t: "received", ok: true }, { t: "has received" }], why: "«A few seconds ago» → pasado simple." },
+    { prompt: "The pilot ___ with ATC now.", options: [{ t: "speaks", ok: true }, { t: "spoke" }, { t: "has spoken" }], why: "«Now» → presente simple." },
+    { prompt: "A flight level ___ pressure altitude.", options: [{ t: "indicates", ok: true }, { t: "indicated" }, { t: "has indicated" }], why: "Hecho general → presente simple." },
+    { prompt: "The aircraft ___ just descended 20,000 feet.", options: [{ t: "has", ok: true }, { t: "had" }, { t: "is" }], why: "«Just» con present perfect: has + just + participio." },
+    { prompt: "Pilots ___ checklists before takeoff.", options: [{ t: "follow", ok: true }, { t: "followed" }, { t: "have followed" }], why: "Rutina → presente simple." }
+  ];
+
+  var Q_GAME3 = [
+    { prompt: "If the controller ___ the request, he would have cleared the altitude.", options: [{ t: "had understood", ok: true }, { t: "understood" }, { t: "has understood" }], why: "If + past perfect: had understood." },
+    { prompt: "If the crew ___ the checklist, they might have noticed the problem.", options: [{ t: "reviewed" }, { t: "had reviewed", ok: true }, { t: "have reviewed" }], why: "If + past perfect: had reviewed." },
+    { prompt: "The aircraft would have climbed if the pilot ___ the instruction.", options: [{ t: "had followed", ok: true }, { t: "followed" }, { t: "has followed" }], why: "La condición va en past perfect: had followed." },
+    { prompt: "If the radio ___ working, the controller would have heard the call.", options: [{ t: "had been", ok: true }, { t: "was" }, { t: "has been" }], why: "Forma estándar del tercer condicional: had been." },
+    { prompt: "If they ___ more fuel, they could have diverted.", options: [{ t: "had had", ok: true }, { t: "had" }, { t: "have had" }], why: "Past perfect de «have»: had had." },
+    { prompt: "If the pilot had spoken more slowly, the controller ___ him.", options: [{ t: "would have understood", ok: true }, { t: "would understand" }, { t: "will understand" }], why: "Consecuencia: would have + participio." },
+    { prompt: "If the alarm ___ earlier, the crew could have reacted.", options: [{ t: "had sounded", ok: true }, { t: "sounded" }, { t: "has sounded" }], why: "If + past perfect: had sounded." },
+    { prompt: "We ___ have avoided the overspeed if we had reduced thrust.", options: [{ t: "might", ok: true }, { t: "must" }, { t: "can" }], why: "La consecuencia usa might have + participio: might have avoided." }
+  ];
+
+  var Q_GAME4 = [
+    { prompt: "What flight level did the pilot request?", replay: 0, options: [{ t: "FL350" }, { t: "FL370", ok: true }, { t: "FL390" }], why: "En 00:00 el piloto pide ascender al nivel 370." },
+    { prompt: "What was the first reported descent rate?", replay: 14, options: [{ t: "8,000 feet per minute", ok: true }, { t: "20,000 feet per minute" }, { t: "22,000 feet per minute" }], why: "En 00:14 el piloto informa 8.000 pies por minuto; más adelante la cifra sube." },
+    { prompt: "What did the controller tell the pilot at 00:05?", replay: 5, options: [{ t: "Climb and maintain FL370.", ok: true }, { t: "Descend to 8,000 feet." }, { t: "Contact Miami Center." }], why: "El controlador autoriza ascender y mantener el nivel 370, sin virar más a la derecha del rumbo actual." },
+    { prompt: "What does “overspeed” mean?", replay: 22, options: [{ t: "The aircraft is exceeding its maximum permitted speed.", ok: true }, { t: "The aircraft is flying too slowly." }, { t: "The aircraft has lost radio contact." }], why: "«Overspeed» es una condición en la que la aeronave supera su velocidad máxima permitida." },
+    { prompt: "What did the pilot say at 00:36?", replay: 36, options: [{ t: "“We're going to crash into the ground.”", ok: true }, { t: "“We have the runway in sight.”" }, { t: "“We are returning to the airport.”" }], why: "En 00:36 el piloto dice: «We're going to crash into the ground»." },
+    { prompt: "What did the controller ask at 01:06?", replay: 66, options: [{ t: "“How do you hear?”", ok: true }, { t: "“Say your altitude.”" }, { t: "“Squawk ident.”" }], why: "En 01:06 el controlador comprueba la legibilidad: «How do you hear?»." }
+  ];
+
+  var MATCH = [
+    { id: "climb", en: "Climb", es: "Ascender" },
+    { id: "descend", en: "Descend", es: "Descender" },
+    { id: "maintain", en: "Maintain", es: "Mantener" },
+    { id: "heading", en: "Heading", es: "Rumbo" },
+    { id: "fl", en: "Flight level", es: "Nivel de vuelo" },
+    { id: "overspeed", en: "Overspeed", es: "Exceso de velocidad" },
+    { id: "traffic", en: "Traffic", es: "Tráfico aéreo" },
+    { id: "emergency", en: "Emergency", es: "Emergencia" },
+    { id: "bank", en: "Bank angle", es: "Ángulo de alabeo" },
+    { id: "descent", en: "Descent rate", es: "Régimen de descenso" }
+  ];
+
+  var video = $("#videoEl");
+  var transcriptEl = $("#transcript");
+  var capEn = $("#capEn");
+  var capEs = $("#capEs");
+  var captionBox = $("#captionBox");
+  var cueEls = [];
+  var activeCue = -2;
+
+  CUES.forEach(function (cue) {
+    var row = document.createElement("button");
+    row.type = "button";
+    row.className = "cue";
+    row.setAttribute("aria-label", "Repetir desde " + fmt(cue.t));
+    row.innerHTML = '<span class="cue-time">' + fmt(cue.t) + '</span>' +
+      '<span class="cue-body"><span class="en">' + cue.en + '</span><span class="es">' + cue.es + '</span>' +
+      (cue.note ? '<span class="flag">Verificar con el audio</span>' : "") +
+      '</span><span class="cue-play" aria-hidden="true">▶</span>';
+    row.addEventListener("click", function () { jumpTo(cue.t); });
+    transcriptEl.appendChild(row);
+    cueEls.push(row);
+  });
+
+  function currentCue() {
+    var t = video.currentTime || 0;
+    var idx = -1;
+    for (var i = 0; i < CUES.length; i++) {
+      if (t >= CUES[i].t - 0.15) { idx = i; } else { break; }
+    }
+    return idx;
+  }
+
+  function setCue(i) {
+    if (i === activeCue) { return; }
+    activeCue = i;
+    cueEls.forEach(function (el, k) { el.classList.toggle("active", k === i); });
+    if (i >= 0 && CUES[i]) {
+      capEn.textContent = CUES[i].en;
+      capEs.textContent = CUES[i].es;
+      var el = cueEls[i];
+      if (el) {
+        var top = el.offsetTop;
+        var h = el.offsetHeight;
+        var box = transcriptEl;
+        if (top < box.scrollTop || top + h > box.scrollTop + box.clientHeight) {
+          box.scrollTop = Math.max(0, top - box.clientHeight / 2 + h / 2);
+        }
+      }
+    }
+  }
+
+  function jumpTo(t) {
+    try { video.currentTime = t + 0.02; } catch (err) {}
+    var p = video.play();
+    if (p && p.catch) { p.catch(function () {}); }
+  }
+
+  video.addEventListener("timeupdate", function () { setCue(currentCue()); });
+  video.addEventListener("error", function () {
+    capEn.textContent = "No se pudo cargar el vídeo. Comprueba la conexión a internet.";
+    capEs.textContent = "El vídeo se transmite desde Cloudinary.";
+  });
+
+  captionBox.addEventListener("click", function () {
+    var i = currentCue();
+    jumpTo(CUES[Math.max(0, i)].t);
+  });
+
+  var playBtn = $("#playBtn");
+  playBtn.addEventListener("click", function () {
+    if (video.paused) {
+      var p = video.play();
+      if (p && p.catch) { p.catch(function () {}); }
+    } else {
+      video.pause();
+    }
+  });
+  video.addEventListener("play", function () { playBtn.textContent = "Pausar"; });
+  video.addEventListener("pause", function () { playBtn.textContent = "Reproducir"; });
+
+  $("#replayBtn").addEventListener("click", function () {
+    var i = currentCue();
+    jumpTo(CUES[Math.max(0, i)].t);
+  });
+
+  var esBtn = $("#esBtn");
+  esBtn.addEventListener("click", function () {
+    var hidden = document.documentElement.classList.toggle("hide-es");
+    esBtn.setAttribute("aria-pressed", String(!hidden));
+    esBtn.textContent = hidden ? "Mostrar español" : "Ocultar español";
+  });
+
+  setCue(0);
+
+  var dictList = $("#dictList");
+  var dictCount = $("#dictCount");
+  function renderDict(query) {
+    var term = (query || "").trim().toLowerCase();
+    dictList.innerHTML = "";
+    var items = DICTIONARY.filter(function (d) {
+      if (!term) { return true; }
+      return (d.en + " " + d.es + " " + d.example).toLowerCase().indexOf(term) !== -1;
+    });
+    items.forEach(function (d) {
+      var row = document.createElement("div");
+      row.className = "dict-row";
+      row.innerHTML = '<div class="dict-term"><span class="en">' + d.en + '</span><span class="es">' + d.es + '</span></div>' +
+        '<div class="dict-ex"><p>' + d.example + '</p><p class="es">' + d.exampleEs + '</p></div>';
+      dictList.appendChild(row);
+    });
+    dictCount.textContent = items.length + " de " + DICTIONARY.length + " términos";
+  }
+  $("#dictSearch").addEventListener("input", function (e) { renderDict(e.target.value); });
+  renderDict("");
+
+  var expRoot = $("#expressions");
+  EXPRESSIONS.forEach(function (x) {
+    var card = document.createElement("article");
+    card.className = "exp";
+    var isConv = x.type.toLowerCase().indexOf("conversacional") !== -1;
+    card.innerHTML = '<div class="exp-head"><div><h3>' + x.term + '</h3><p class="exp-es">' + x.es + '</p></div>' +
+      '<span class="tag ' + (isConv ? "conv" : "std") + '">' + x.type + '</span></div>' +
+      '<button type="button" class="btn small exp-toggle" aria-expanded="false">Mostrar explicación</button>' +
+      '<div class="exp-body" hidden><p class="exp-meaning">' + x.meaning + '</p>' +
+      '<p class="exp-ex"><span class="exp-lab">Ejemplo</span>' + x.example + '</p>' +
+      '<p class="exp-ex es">' + x.exampleEs + '</p></div>';
+    var btn = $(".exp-toggle", card);
+    var body = $(".exp-body", card);
+    btn.addEventListener("click", function () {
+      var open = body.hidden;
+      body.hidden = !open;
+      btn.textContent = open ? "Ocultar explicación" : "Mostrar explicación";
+      btn.setAttribute("aria-expanded", String(open));
+    });
+    expRoot.appendChild(card);
+  });
+
+  var FLASH = DICTIONARY.slice();
+  var fi = 0;
+  var flipped = false;
+  var fcCard = $("#fcCard");
+  var fcWord = $("#fcWord");
+  var fcEx = $("#fcEx");
+  var fcWordEs = $("#fcWordEs");
+  var fcExEs = $("#fcExEs");
+  var fcCount = $("#fcCount");
+
+  function paintCard() {
+    var d = FLASH[fi];
+    fcWord.textContent = d.en;
+    fcEx.textContent = d.example;
+    fcWordEs.textContent = d.es;
+    fcExEs.textContent = d.exampleEs;
+    fcCount.textContent = (fi + 1) + " / " + FLASH.length;
+    flipped = false;
+    fcCard.classList.remove("flipped");
+    fcCard.setAttribute("aria-pressed", "false");
+    fcCard.setAttribute("aria-label", "Tarjeta " + (fi + 1) + ": " + d.en + ". Pulsa para girar.");
+  }
+  function flipCard() {
+    flipped = !flipped;
+    fcCard.classList.toggle("flipped", flipped);
+    fcCard.setAttribute("aria-pressed", String(flipped));
+  }
+  fcCard.addEventListener("click", flipCard);
+  fcCard.addEventListener("keydown", function (e) {
+    if (e.key === "Enter" || e.key === " ") { e.preventDefault(); flipCard(); }
+  });
+  $("#fcFlip").addEventListener("click", flipCard);
+  $("#fcPrev").addEventListener("click", function () {
+    fi = (fi - 1 + FLASH.length) % FLASH.length;
+    paintCard();
+  });
+  $("#fcNext").addEventListener("click", function () {
+    fi = (fi + 1) % FLASH.length;
+    paintCard();
+  });
+  $("#fcShuffle").addEventListener("click", function () {
+    shuffle(FLASH);
+    fi = 0;
+    paintCard();
+  });
+  paintCard();
+
+  function mountQuiz(root, questions, cfg) {
+    cfg = cfg || {};
+    function build() {
+      root.innerHTML = "";
+      var bar = document.createElement("div");
+      bar.className = "quiz-bar";
+      var score = document.createElement("span");
+      score.className = "quiz-score";
+      score.setAttribute("aria-live", "polite");
+      var reset = document.createElement("button");
+      reset.type = "button";
+      reset.className = "btn small";
+      reset.textContent = "Reiniciar";
+      bar.appendChild(score);
+      bar.appendChild(reset);
+      root.appendChild(bar);
+
+      var list = document.createElement("div");
+      list.className = "q-list";
+      root.appendChild(list);
+
+      var total = questions.length;
+      var answered = 0;
+      var right = 0;
+      score.textContent = "Aciertos: 0 / " + total;
+
+      questions.forEach(function (q, qi) {
+        var opts = shuffle(q.options.map(function (o) { return { t: o.t, ok: !!o.ok }; }));
+        var card = document.createElement("article");
+        card.className = "q";
+
+        var head = document.createElement("p");
+        head.className = "q-prompt";
+        head.innerHTML = '<span class="q-num">' + (qi + 1) + '</span><span>' + q.prompt + '</span>';
+        card.appendChild(head);
+
+        if (q.replay != null && cfg.replay) {
+          var rb = document.createElement("button");
+          rb.type = "button";
+          rb.className = "btn tiny replay";
+          rb.textContent = "▶ Escuchar " + fmt(q.replay);
+          rb.addEventListener("click", function () { cfg.replay(q.replay); });
+          card.appendChild(rb);
+        }
+
+        var wrap = document.createElement("div");
+        wrap.className = "options";
+        opts.forEach(function (o, oi) {
+          var b = document.createElement("button");
+          b.type = "button";
+          b.className = "opt";
+          b.dataset.ok = o.ok ? "1" : "0";
+          b.innerHTML = '<span class="opt-key">' + "ABCD"[oi] + '</span><span>' + o.t + '</span>';
+          b.addEventListener("click", function () {
+            if (card.dataset.done) { return; }
+            card.dataset.done = "1";
+            $$(".opt", card).forEach(function (x) { x.disabled = true; });
+            if (o.ok) {
+              b.classList.add("correct");
+            } else {
+              b.classList.add("wrong");
+              var good = $$(".opt", card).filter(function (x) { return x.dataset.ok === "1"; })[0];
+              if (good) { good.classList.add("correct"); }
+            }
+            var why = document.createElement("p");
+            why.className = "q-why";
+            why.innerHTML = "<strong>" + (o.ok ? "Correcto." : "Incorrecto.") + "</strong> " + q.why;
+            card.appendChild(why);
+            answered++;
+            if (o.ok) { right++; }
+            score.textContent = answered === total
+              ? "Resultado final: " + right + " / " + total
+              : "Aciertos: " + right + " / " + total;
+          });
+          wrap.appendChild(b);
+        });
+        card.appendChild(wrap);
+        list.appendChild(card);
+      });
+
+      reset.addEventListener("click", build);
+    }
+    build();
+  }
+
+  var QUIZZES = {
+    presentSimple: Q_PRESENT,
+    pastSimple: Q_PAST,
+    presentPerfect: Q_PERFECT,
+    thirdConditional: Q_THIRD
+  };
+
+  $$("[data-quiz]").forEach(function (el) {
+    var key = el.getAttribute("data-quiz");
+    if (QUIZZES[key]) { mountQuiz(el, QUIZZES[key]); }
+  });
+
+  var g4 = $("#g4video");
+  mountQuiz($("#quizGame2"), Q_GAME2);
+  mountQuiz($("#quizGame3"), Q_GAME3);
+  mountQuiz($("#quizGame4"), Q_GAME4, {
+    replay: function (t) {
+      try { g4.currentTime = t + 0.02; } catch (err) {}
+      var p = g4.play();
+      if (p && p.catch) { p.catch(function () {}); }
+    }
+  });
+
+  var leftEl = $("#matchLeft");
+  var rightEl = $("#matchRight");
+  var g1Score = $("#g1Score");
+  var g1Status = $("#g1Status");
+  var selL = null;
+  var selR = null;
+  var matchedCount = 0;
+  var lock = false;
+
+  function resetMatch() {
+    leftEl.innerHTML = "";
+    rightEl.innerHTML = "";
+    selL = null;
+    selR = null;
+    matchedCount = 0;
+    lock = false;
+    g1Score.textContent = "Emparejadas: 0 / " + MATCH.length;
+    g1Status.textContent = "";
+    var left = shuffle(MATCH.slice());
+    var right = shuffle(MATCH.slice());
+    left.forEach(function (pair) {
+      var b = document.createElement("button");
+      b.type = "button";
+      b.className = "match-item";
+      b.textContent = pair.en;
+      b.dataset.id = pair.id;
+      b.addEventListener("click", function () { pick(b, "l"); });
+      leftEl.appendChild(b);
+    });
+    right.forEach(function (pair) {
+      var b = document.createElement("button");
+      b.type = "button";
+      b.className = "match-item";
+      b.textContent = pair.es;
+      b.dataset.id = pair.id;
+      b.addEventListener("click", function () { pick(b, "r"); });
+      rightEl.appendChild(b);
+    });
+  }
+
+  function pick(btn, side) {
+    if (lock || btn.classList.contains("matched")) { return; }
+    if (side === "l") {
+      if (selL) { selL.classList.remove("selected"); }
+      selL = btn;
+    } else {
+      if (selR) { selR.classList.remove("selected"); }
+      selR = btn;
+    }
+    btn.classList.add("selected");
+    if (selL && selR) { checkMatch(); }
+  }
+
+  function checkMatch() {
+    var a = selL;
+    var b = selR;
+    if (a.dataset.id === b.dataset.id) {
+      a.classList.remove("selected");
+      b.classList.remove("selected");
+      a.classList.add("matched");
+      b.classList.add("matched");
+      a.disabled = true;
+      b.disabled = true;
+      selL = null;
+      selR = null;
+      matchedCount++;
+      g1Score.textContent = "Emparejadas: " + matchedCount + " / " + MATCH.length;
+      if (matchedCount === MATCH.length) {
+        g1Status.textContent = "Has emparejado las diez palabras. Puedes reiniciar para practicar de nuevo.";
+      }
+    } else {
+      lock = true;
+      a.classList.add("miss");
+      b.classList.add("miss");
+      g1Status.textContent = "Esa pareja no es correcta. Prueba otra vez.";
+      setTimeout(function () {
+        a.classList.remove("miss", "selected");
+        b.classList.remove("miss", "selected");
+        selL = null;
+        selR = null;
+        lock = false;
+      }, 550);
+    }
+  }
+
+  $("#g1Reset").addEventListener("click", resetMatch);
+  resetMatch();
+
+  var tabs = $$(".tab");
+  var sections = $$("section.block");
+  var linkFor = {};
+  tabs.forEach(function (t) {
+    var href = t.getAttribute("href");
+    linkFor[href.replace("#", "")] = t;
+    t.addEventListener("click", function () {
+      tabs.forEach(function (x) { x.classList.remove("active"); });
+      t.classList.add("active");
+    });
+  });
+
+  if ("IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          var link = linkFor[entry.target.id];
+          if (link) {
+            tabs.forEach(function (x) { x.classList.remove("active"); });
+            link.classList.add("active");
+          }
+        }
+      });
+    }, { rootMargin: "-40% 0px -55% 0px", threshold: 0 });
+    sections.forEach(function (s) { io.observe(s); });
+  }
+})();
+</script>
+</body>
+</html>
